@@ -1,33 +1,34 @@
 const latte = {
     id:'latte',
-    Name: 'Coffee latte',
-    Type: 'coffee',
+    name: 'Coffee latte',
+    type: 'coffee',
+    image: '../assets/latte.png',
     folavor: 'smoothie and creamy',
     price: 3.5,
     cost: 1.5,
 };
 const cappuccino = {
     id:'cappuccino',
-    Name: 'Coffee cappuccino',
-    Type: 'coffee',
+    name: 'Coffee cappuccino',
+    type: 'coffee',
     folavor: 'foamy and bitter',
     price: 3.75,
     cost: 1.35,
 
 };
-const americano = {
-    id: 'americano',
-    Name: 'Americano',
-    Type: 'coffee',
-    folavor: 'bitter',
-    price: 2.75,
-    cost: 1.15,
+const frappuccino = {
+    id: 'frappuccino',
+    name: 'Frappuccino',
+    type: 'coffee',
+    folavor: 'sweet and creamy',
+    price: 4.75,
+    cost: 2.15,
 
 };
 const dripCoffee = {
     id:'dripCoffee',
-    Name: 'Regular Coffee',
-    Type: 'coffee',
+    name: 'Regular Coffee',
+    type: 'coffee',
     folavor: 'fresh and bitter',
     price: 2.75,
     cost: 0.85,
@@ -35,8 +36,8 @@ const dripCoffee = {
 };
 const decafCoffee = {
     id:'decafCoffee',
-    Name: 'Decaf Coffee',
-    Type: 'decaf coffee',
+    name: 'Decaf Coffee',
+    type: 'decaf coffee',
     folavor: 'chocolaty and bitter',
     price: 2.75,
     cost: 0.85,
@@ -44,8 +45,8 @@ const decafCoffee = {
 };
 const greenTea = {
     id:'greenTea',
-    Name: 'Green Tea',
-    Type: 'tea',
+    name: 'Green Tea',
+    type: 'tea',
     folavor: 'fresh',
     price: 2.75,
     cost: 0.95,
@@ -53,8 +54,8 @@ const greenTea = {
 };
 const blackTea = {
     id:'blackTea',
-    Name: 'Black TEa',
-    Type: 'tea',
+    name: 'Black TEa',
+    type: 'tea',
     folavor: 'earlgray',
     price: 2.75,
     cost: 0.95,
@@ -63,7 +64,7 @@ const blackTea = {
 const drinks = [
     latte,
     cappuccino,
-    americano,
+    frappuccino,
     dripCoffee,
     decafCoffee,
     greenTea,
@@ -71,3 +72,5 @@ const drinks = [
 
 ];
 export default drinks;
+
+
