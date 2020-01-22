@@ -1,0 +1,12 @@
+.image-container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+
+}
+.button-container{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
