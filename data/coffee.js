@@ -59,7 +59,7 @@ const greenTea = {
 };
 const blackTea = {
     id:'blackTea',
-    name: 'Black TEa',
+    name: 'Black Tea',
     type: 'tea',
     image: '../assets/blacktea.png',
     folavor: 'earlgray',
@@ -78,5 +78,7 @@ const drinks = [
 
 ];
 export default drinks;
+
+
 
 
