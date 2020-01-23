@@ -2,10 +2,11 @@
 // import example from '../src/example.js';
 import '../data/cart.js';
 import { cart } from '../data/cart.js';
-import { findById } from '../findID_calc_functions/utils.js';
+import { findById, calcLineItem } from '../findID_calc_functions/utils.js';
 const test = QUnit.test;
 
-test('time to test a function', function(assert) { const someId = 'latte';
+test('test if findById function works', function(assert) { 
+    const someId = 'latte';
     const expected = cart[0];
     
     const result = findById(someId, cart);
@@ -13,11 +14,11 @@ test('time to test a function', function(assert) { const someId = 'latte';
 });
 
 
-// test('test numbers are identical', assert => {
-//     const Uguess = 5;
-//     const expected = 0;
+test(' if calcLineItem fuction works', assert => {
+    const quantity = 5;
+    const expected = 10;
     
-//     const result = compareNum(Uguess, 5);
+    const result = calcLineItem(quantity, 2);
     
-//     assert.equal(result, expected);
-// });
+    assert.equal(result, expected);
+});
