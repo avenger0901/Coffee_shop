@@ -1,0 +1,10 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 50%;
+    
+}
+td, th {
+    text-align: center;
+    border: solid lightblue;
+}
