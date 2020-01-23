@@ -9,9 +9,9 @@ const latte = {
 };
 const cappuccino = {
     id:'cappuccino',
-    name: 'Coffee cappuccino',
+    name: 'Coffee Cappuccino',
     type: 'coffee',
-    image: '../assets/catpuccino.jpg',
+    image: '../assets/capuccino.png',
     folavor: 'foamy and bitter',
     price: '$3.75',
     cost: 1.35,
