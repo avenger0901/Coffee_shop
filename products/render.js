@@ -24,7 +24,7 @@ export default function render(drink){
     drinksElement.appendChild(buttonCDiv);
 
     const priceTag = document.createElement('span');
-    priceTag.textContent = 'Price';
+    priceTag.textContent = 'Price:';
     buttonCDiv.appendChild(priceTag);
 
 
