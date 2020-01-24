@@ -1,3 +1,4 @@
+import { findById } from '../findID_calc_functions/utils.js';
 
 export default function render(drink){
     console.log('hahahhaha');
@@ -35,11 +36,30 @@ export default function render(drink){
     buttonTag.textContent = 'Add';
     buttonTag.value = drink.id;
     buttonCDiv.appendChild(buttonTag);
-    
 
-console.log(drinksElement);
-console.log(buttonCDiv);
-console.log(imgTag);
+    buttonCDiv.addEventListener('click', () => {
+        let currentCartStorage = localStorage.getItem('CART');
+        let cart;
+        if (currentCartStorage){
+            cart = JSON.parse(currentCartStorage);
+        } else {
+            cart = [];
+        }
+        let lineItem = findById(drink.id, cart);
+        if (!lineItem){
+            lineItem = {
+                id: drink.id,
+                quantity:1
+            }; 
+            cart.push(lineItem);
+        } else {
+            lineItem.quantity++;
+        }
+        currentCartStorage = JSON.stringify(cart);
+        localStorage.setItem('CART', currentCartStorage);
+        console.log(lineItem);
+    });
+    
     return drinksElement;
 
 }
