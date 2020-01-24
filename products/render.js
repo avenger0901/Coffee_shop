@@ -42,22 +42,26 @@ export default function render(drink){
         let cart;
         if (currentCartStorage){
             cart = JSON.parse(currentCartStorage);
-        } else {
+        } 
+        else {
             cart = [];
         }
         let lineItem = findById(drink.id, cart);
+
         if (!lineItem){
             lineItem = {
                 id: drink.id,
                 quantity:1
             }; 
             cart.push(lineItem);
-        } else {
+        } 
+        else {
             lineItem.quantity++;
         }
+
         currentCartStorage = JSON.stringify(cart);
         localStorage.setItem('CART', currentCartStorage);
-        console.log(lineItem);
+      
     });
     
     return drinksElement;
