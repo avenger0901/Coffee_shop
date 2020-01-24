@@ -10,10 +10,12 @@
 </head>
 <header>Shopping cart</header>
 
-    <a href="../products/index.html"><button>Go to shop</button></a>
-
 <body>
     <table> 
+        <tr id="order-tag">
+            <th colspan="4">Your Orders</th>
+
+            </tr>
         <tr>
           <th class="align-text">Drinks</th>
           <th>Quantity</th> 
@@ -21,14 +23,17 @@
           <th>Total</th>
         </tr>
       
-        <tfoot>
+    <tfoot>
         <tr>
-            <td>Order Total:</td>
+            <td colspan="3">Order Total:</td>
             <td id="total-cost">a number here</td>
         </tr>
     </tfoot>
-      </table>
-    <button>Place Order</button>
+</table>
+        <div align:"right" valign:"bottom">
+        <button>Place Order</button>  
+        <a id="goShop" href="../products/index.html"><button>Go back to drinks</button></a>
+    </div>
     <script type="module" src="shopping-carts.js"></script>
 </body>
 

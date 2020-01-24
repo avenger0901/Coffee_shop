@@ -21,24 +21,7 @@ export default function renderlineitem(Angeladrinks, cartItem) {
    
     trTag.appendChild(tdTagTotal);
 
-    
-
-
-
-   
+ 
     return trTag;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
