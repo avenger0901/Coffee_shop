@@ -1,7 +1,6 @@
 table {
     border-collapse: collapse;
     height: 50%;
-  
     align-items: center;
     margin: 0 auto;
 }
@@ -9,12 +8,12 @@ table {
 td, th {
     width: 250px;
     text-align: center;
-    border: solid rgba(9, 223, 238, 0.582);
+    padding: 8px;
     
 }
 
 body{
-    background-color: lightpink;
+    background-color:white
 }
 
 header{
@@ -27,5 +26,15 @@ header{
 }
 div{
     display: flex;
-    justify-content:flex-end;
+    justify-content:center;
+    
+}
+button{
+   padding: 5px;
+   font-size: 14px;
+}
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
 }
