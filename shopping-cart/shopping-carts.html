@@ -10,25 +10,31 @@
 </head>
 <header>Shopping cart</header>
 
-    <a href="../products/index.html"><button>Go to shop</button></a>
-
 <body>
     <table> 
-        <tr>
+        <tr id="order-tag">
+            <th bgcolor="lightblue" colspan="4">Your Orders</th>
+
+            </tr>
+        <tr bgcolor="lightpink">
           <th class="align-text">Drinks</th>
           <th>Quantity</th> 
           <th>Price</th>
           <th>Total</th>
         </tr>
       
-        <tfoot>
-        <tr>
-            <td>Order Total:</td>
+    <tfoot>
+        <tr bgcolor="lightpink">
+            <td colspan="3">Order Total:</td>
             <td id="total-cost">a number here</td>
         </tr>
     </tfoot>
-      </table>
-    <button>Place Order</button>
+</table>
+        <div align:"right" valign:"bottom">
+        <button>Place Order</button>  
+        <div class="divider"></div>
+        <a id="goShop" href="../products/index.html"><button>Go back to drinks</button></a>
+    </div>
     <script type="module" src="shopping-carts.js"></script>
 </body>
 

@@ -1,23 +1,40 @@
 table {
     border-collapse: collapse;
     height: 50%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    ;
+    margin: 0 auto;
+}
 
-   
-  
-}
 td, th {
-    width: 260px;
+    width: 250px;
     text-align: center;
-    border: solid rgba(9, 223, 238, 0.582);
+    padding: 8px;
+    
 }
+
 body{
-    background-color: lightpink;
+    background-color:white
 }
+
 header{
     font-size: 30px;
     color: lightseagreen;
+}
+#order-tag{
+    text-align: center;
+    width: 100%;
+}
+div{
+    display: flex;
+    justify-content:center;
+    
+}
+button{
+   padding: 5px;
+   font-size: 14px;
+}
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
 }

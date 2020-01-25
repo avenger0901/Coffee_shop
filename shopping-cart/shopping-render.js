@@ -1,21 +1,15 @@
-import { calcLineItem } from '../findID_calc_functions/utils.js';
+import { calcLineItem, calcOrderItem } from '../findID_calc_functions/utils.js';
 export default function renderlineitem(Angeladrinks, cartItem) {
    
     const trTag = document.createElement('tr');
 
-   
-
-    
     const tdTagName = document.createElement('td');
     tdTagName.textContent = Angeladrinks.name;
     trTag.appendChild(tdTagName);
 
-
     const tdTagQuantity = document.createElement('td');
     tdTagQuantity.textContent = cartItem.quantity;
     trTag.appendChild(tdTagQuantity);
-
-
 
     const tdTagPrice = document.createElement('td');
     tdTagPrice.textContent = Angeladrinks.price;
@@ -27,24 +21,7 @@ export default function renderlineitem(Angeladrinks, cartItem) {
    
     trTag.appendChild(tdTagTotal);
 
-    
-
-
-
-   
+ 
     return trTag;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
