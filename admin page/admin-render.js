@@ -10,14 +10,6 @@ const makeCart = () => {
     }
 };
 
-
-
-
-
-
-
-
-
 export default function render(drink){
     const drinksElement = document.createElement('li');
     drinksElement.className = 'drink-container';
@@ -49,35 +41,25 @@ export default function render(drink){
     h5Tag.textContent = drink.price;
     buttonCDiv.appendChild(h5Tag);
 
-    const buttonTag = document.createElement('button');
-    buttonTag.textContent = 'Add';
-    buttonTag.value = drink.id;
-    buttonCDiv.appendChild(buttonTag);
 
     buttonCDiv.addEventListener('click', () => {
-        let currentCartStorage = localStorage.getItem('CART');
-        let cart;
-        if (currentCartStorage){
-            cart = JSON.parse(currentCartStorage);
-        } 
-        else {
-            cart = [];
-        }
-        let lineItem = findById(drink.id, cart);
+        const cart = makeCart();
 
-        if (!lineItem){
-            lineItem = {
+        let drinksAlreadyInCart = findById(drink.id, cart);
+
+        if (!drinksAlreadyInCart){
+            drinksAlreadyInCart = {
                 id: drink.id,
                 quantity:1
             }; 
-            cart.push(lineItem);
+            cart.push(drinksAlreadyInCart);
         } 
         else {
-            lineItem.quantity++;
+            drinksAlreadyInCart.quantity++;
         }
 
-        currentCartStorage = JSON.stringify(cart);
-        localStorage.setItem('CART', currentCartStorage);
+        const currentCartStage = JSON.stringify(cart);
+        localStorage.setItem('CART', currentCartStage);
       
     });
     
