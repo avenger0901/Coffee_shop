@@ -1,6 +1,9 @@
 import render from './admin-render.js';
 import { getDrinks } from '../findID_calc_functions/utils.js';
+
 const drinks = getDrinks();
+console.log(drinks);
+console.log('==========');
 const drinkListUl = document.getElementById('drinks');
 const button = document.querySelector('button');
 
@@ -9,15 +12,15 @@ button.addEventListener('click', (event) => {
     const form = document.querySelector('form');
 
     const data = new FormData(form);
-
-    const inputPrice = FormData(data.get('price'));
+    const inputPrice = Number(data.get('price'));
 
     const newDrink = {
         name: data.get('name'),
         id: data.get('id'),
         price: '$' + inputPrice.toFixed(2),
-        imge: data.get('image')
+        image: data.get('image')
     };
+    console.log(newDrink);
 
     drinks.push(newDrink);
 
