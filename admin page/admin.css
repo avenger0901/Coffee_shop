@@ -1,0 +1,57 @@
+header{
+    font-size: 30px;
+    color: blue;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  
+}
+.image-container{
+    display: flex; 
+   flex-flow: column;
+   align-items: center;
+}
+
+h5{
+    margin-right: 10px;
+    color: blue;
+    font-size: 14px;
+}
+li{
+    list-style: none;
+}
+button{
+    border-radius: 12px;
+    font-size: 14px;
+    height: 35px;
+   color:blue;
+   background-color: greenyellow;
+}
+.drink-container{
+    display: flex;
+    flex-direction: column;
+    border: 20px solid lightblue;
+    border-radius: 10px;
+   width: 240px;
+    padding:1px;
+    height: 250px;
+    background-color: lightsalmon;
+
+}
+img{
+    height: 130px;
+    width: 140px;
+}
+#drinks{
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ 
+}
+body{
+    background-color: lightpink;
+}

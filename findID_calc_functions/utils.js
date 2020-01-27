@@ -1,3 +1,5 @@
+import drinks from '../data/coffee.js';
+
 export const findById = (someId, someArray) => {
     for (let i = 0 ; i < someArray.length; i++){
         const drink = someArray[i];
@@ -21,4 +23,20 @@ export const calcOrderItem = (cartArray, drinksArray) => {
     }
     
     return orderTotal;
+};
+
+export const getDrinks = () => {
+    drinksInLocalStorage();
+
+    const products = localStorage.getItem('some_key');
+    const parseProducts = JSON.parse(products);
+    return parseProducts;
+};
+
+export const drinksInLocalStorage = () => {
+    const productsMightInStorage = localStorage.getItem('some_key');
+    if (!productsMightInStorage) {
+        const stringfyDrinks = JSON.stringify(drinks);
+        localStorage.setItem('some_key', stringfyDrinks);
+    }
 };
